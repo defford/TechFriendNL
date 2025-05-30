@@ -3,7 +3,8 @@ import nodemailer from 'nodemailer';
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
-    const { name, email, message } = req.body;
+    // Destructure subject from req.body
+    const { name, email, subject, message } = req.body;
 
     // IMPORTANT: Configure these environment variables in Vercel
     // EMAIL_USER: Your email address (e.g., your Gmail)
@@ -20,12 +21,15 @@ export default async function handler(req, res) {
       from: `"${name}" <${process.env.EMAIL_USER}>`, // Sender address will be your configured EMAIL_USER
       replyTo: email, // The email address entered by the user in the form
       to: 'techfriendnl@gmail.com', // << REPLACE THIS with your actual receiving email
-      subject: `New Contact Form Submission from ${name}`,
-      text: `You have received a new message from your website contact form.\n\nHere are the details:\nName: ${name}\nEmail: ${email}\nMessage:\n${message}`,
+      // Updated subject line
+      subject: `[TechFriendNL Contact] - ${subject || 'No Subject Provided'} - From: ${name}`,
+      // Updated text and html content to include the subject
+      text: `You have received a new message from your website contact form.\n\nHere are the details:\nName: ${name}\nEmail: ${email}\nSubject: ${subject || 'N/A'}\nMessage:\n${message}`,
       html: `
         <h2>New Contact Form Submission</h2>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
+        <p><strong>Subject:</strong> ${subject || 'N/A'}</p>
         <p><strong>Message:</strong></p>
         <p>${message.replace(/\n/g, '<br>')}</p>
       `,
