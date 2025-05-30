@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './CTA.css';
 
 function CTA({ title, text, buttonText, buttonLink }) {
@@ -6,9 +7,7 @@ function CTA({ title, text, buttonText, buttonLink }) {
     <section className="cta-section">
       <h2>{title || 'Ready to get started?'}</h2>
       <p>{text || 'Contact us today for a free consultation.'}</p>
-      <a href={buttonLink || '/contact'} className="cta-button">
-        {buttonText || 'Contact Us'}
-      </a>
+      <Link to="/contact" className="hero-cta-button">Let's Talk!</Link>
     </section>
   );
 }
