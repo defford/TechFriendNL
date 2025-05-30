@@ -1,0 +1,43 @@
+.cta-section {
+  background-color: var(--light-gray-color);
+  padding: var(--space-xxl) var(--space-lg);
+  text-align: center;
+  margin-top: var(--space-xl); /* Or remove if spacing is handled by page layout */
+}
+
+.cta-section h2 {
+  font-size: 2rem; /* Corresponds to h2 in global styles */
+  margin-bottom: var(--space-md);
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.cta-section p {
+  font-size: 1.125rem; /* Slightly larger than base */
+  margin-bottom: var(--space-xl);
+  color: var(--text-color-light);
+  max-width: 600px; /* Constrain paragraph width for readability */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-button {
+  display: inline-block; /* To allow margin auto and padding */
+  background-color: var(--accent-green);
+  color: var(--background-color);
+  padding: var(--space-md) var(--space-xl);
+  border: none;
+  border-radius: var(--space-xs);
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease;
+}
+
+.cta-button:hover {
+  background-color: #228c3a; /* Darker green */
+  transform: translateY(-2px);
+}

@@ -1,0 +1,59 @@
+/* Services.css */
+
+.services-page {
+  /* The .container class from index.css handles max-width and horizontal padding */
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-xxl);
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.services-header h1 {
+  margin-bottom: var(--space-md);
+}
+
+.services-header p {
+  font-size: 1.125rem;
+  color: var(--text-color-light);
+  max-width: 800px; /* Max width for the intro paragraph */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center cards if they don't fill the whole row */
+  gap: var(--space-lg); /* Gap between cards */
+  /* ServiceCard.css now uses flex: 1 1 300px; which works well with this gap */
+}
+
+/* 
+  With flex: 1 1 300px on .service-card and flex-wrap: wrap on .services-list,
+  the cards will automatically adjust their width and wrap to the next line.
+  The number of cards per row will depend on the container width and the 300px basis.
+  Explicit media queries for flex-basis are less necessary.
+  We might still want media queries for other adjustments, like gap size or header text.
+*/
+
+@media (max-width: 768px) { /* Small devices (landscape phones, less than 768px) */
+  .services-header p {
+    font-size: 1rem;
+  }
+  .services-list {
+    gap: var(--space-md); /* Reduce gap on smaller screens */
+  }
+}
+
+@media (max-width: 480px) { /* Extra small devices (portrait phones) */
+  .services-page {
+    padding-top: var(--space-md);
+    padding-bottom: var(--space-xl);
+  }
+  .services-header h1 {
+    font-size: 1.75rem; /* Adjust heading size for very small screens */
+  }
+}

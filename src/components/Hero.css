@@ -1,0 +1,47 @@
+.hero-section {
+  background-color: var(--primary-color);
+  color: var(--background-color); /* White text on primary color */
+  padding: var(--space-xxl) var(--space-lg);
+  text-align: center;
+  display: flex; /* For centering content easily */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  max-width: 700px; /* Constrain width for better readability */
+}
+
+.hero-content h1 {
+  font-size: 3rem; /* Larger for hero */
+  margin-bottom: var(--space-md);
+  font-weight: 700; /* Poppins Bold */
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: 1.25rem; /* Slightly larger paragraph */
+  margin-bottom: var(--space-xl);
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 300; /* Poppins Light for contrast */
+}
+
+.hero-cta-button {
+  background-color: var(--accent-orange);
+  color: var(--background-color); /* White text */
+  padding: var(--space-md) var(--space-xl);
+  border: none;
+  border-radius: var(--space-xs);
+  font-size: 1.1rem;
+  font-weight: 600; /* Poppins SemiBold */
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease;
+}
+
+.hero-cta-button:hover {
+  background-color: #e69500; /* Slightly darker orange */
+  transform: translateY(-2px);
+}

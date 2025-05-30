@@ -1,0 +1,77 @@
+/* About.css */
+
+.about-page {
+  /* .container class from index.css handles max-width and horizontal padding */
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-xxl);
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: var(--space-xxl);
+}
+
+.about-header h1 {
+  margin-bottom: var(--space-sm);
+}
+
+.about-header .tagline {
+  font-size: 1.25rem;
+  color: var(--text-color-light);
+  font-style: italic;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-section {
+  margin-bottom: var(--space-xl);
+}
+
+.about-section h2 {
+  margin-bottom: var(--space-md);
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--light-gray-color);
+  padding-bottom: var(--space-xs);
+}
+
+.about-section p,
+.about-section ul {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-color);
+  margin-bottom: var(--space-md);
+}
+
+.about-section ul {
+  list-style: none; /* Remove default bullets */
+  padding-left: 0; /* Remove default padding */
+}
+
+.about-section ul li {
+  padding-left: var(--space-lg); /* Add padding for custom bullet or spacing */
+  position: relative;
+  margin-bottom: var(--space-sm);
+}
+
+.about-section ul li::before {
+  content: '✔'; /* Custom bullet character */
+  color: var(--accent-green);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-header .tagline {
+    font-size: 1.1rem;
+  }
+  .about-section p,
+  .about-section ul {
+    font-size: 1rem;
+  }
+  .about-header {
+    margin-bottom: var(--space-xl);
+  }
+}

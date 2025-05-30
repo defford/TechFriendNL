@@ -1,0 +1,55 @@
+/* Testimonials.css */
+
+.testimonials-page {
+  /* .container class from index.css handles max-width and horizontal padding */
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-xxl);
+}
+
+.testimonials-header {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.testimonials-header h1 {
+  margin-bottom: var(--space-md);
+}
+
+.testimonials-header p {
+  font-size: 1.125rem;
+  color: var(--text-color-light);
+  max-width: 800px; /* Max width for the intro paragraph */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.testimonials-list {
+  display: grid;
+  /* Using grid for potentially more complex layouts if needed, but flexbox is also fine */
+  /* For a single column layout of cards: */
+  grid-template-columns: 1fr; 
+  gap: var(--space-lg);
+  max-width: 700px; /* Constrain width of the testimonial list for readability */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* If we want a multi-column layout for testimonials on wider screens: */
+/* 
+@media (min-width: 992px) { 
+  .testimonials-list {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1000px; 
+  }
+}
+*/
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .testimonials-header p {
+    font-size: 1rem;
+  }
+  .testimonials-list {
+    gap: var(--space-md);
+  }
+}

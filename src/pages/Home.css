@@ -1,0 +1,41 @@
+/* Home.css */
+/* .home-page class is on the root div in Home.jsx, can be used if needed */
+
+.services-preview-section, .about-snippet-section {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.services-preview-section h2, .about-snippet-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.services-grid {
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+  justify-content: center; /* Center cards in the container */
+  gap: 1rem; /* Spacing between cards */
+  margin-bottom: 1rem;
+}
+
+.about-snippet-section p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+  max-width: 800px; /* Constrain width for readability */
+  margin: 0 auto 1rem auto; /* Center the paragraph */
+}
+
+/* Responsive adjustments for service cards if not handled in ServiceCard.css */
+@media (max-width: 768px) {
+  .services-grid {
+    flex-direction: column; /* Stack cards vertically on smaller screens */
+    align-items: center; /* Center stacked cards */
+  }
+  .service-card { /* Ensure ServiceCard.css allows for this override or handles it */
+    flex-basis: 80%; /* Or width: 80%; */
+    max-width: 400px;
+  }
+}

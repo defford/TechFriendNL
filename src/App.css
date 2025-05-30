@@ -1,0 +1,15 @@
+/* App.css */
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure .App takes at least full viewport height */
+}
+
+/* 
+  The main content area (managed by <Routes />) will naturally fill the space 
+  between Navbar and Footer due to the flex-direction: column on .App 
+  and min-height: 100vh on both body and .App.
+  If specific styling for the main content area is needed later (e.g., consistent padding),
+  we can wrap <Routes /> in a <main> tag and style that.
+*/

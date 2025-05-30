@@ -1,0 +1,24 @@
+/* Basic Footer styling */
+.footer {
+  background-color: var(--text-color); /* Dark background */
+  color: var(--light-gray-color); /* Light text for contrast */
+  text-align: center;
+  padding: var(--space-xl) var(--space-lg);
+  margin-top: auto; /* Pushes footer to bottom */
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.9rem; /* Keep it slightly smaller */
+  line-height: 1.5;
+}
+
+.footer a {
+  color: var(--background-color); /* White links on dark background */
+  text-decoration: underline;
+}
+
+.footer a:hover {
+  color: var(--primary-color);
+  text-decoration: none;
+}

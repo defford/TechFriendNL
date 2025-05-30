@@ -1,0 +1,43 @@
+/* Basic Navbar styling */
+.navbar {
+  background-color: var(--background-color); /* Use main background, or var(--light-gray-color) for a slight off-white */
+  padding: var(--space-md) var(--space-lg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border-bottom: 1px solid var(--border-color); */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Softer shadow */
+  position: sticky; /* Make navbar sticky */
+  top: 0;
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+.navbar-brand .brand-text {
+  font-size: 1.75rem; /* Slightly larger */
+  font-weight: 600; /* Using Poppins bold */
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center; /* Align items vertically */
+}
+
+.navbar-item {
+  padding: var(--space-sm) var(--space-md);
+  color: var(--text-color-light);
+  text-decoration: none;
+  font-size: 1rem; /* Base font size for nav items */
+  font-weight: 500; /* Medium weight for nav items */
+  border-radius: var(--space-xxs);
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.navbar-item:hover {
+  color: var(--primary-color);
+  background-color: var(--light-gray-color); /* Subtle background on hover */
+}
+
+/* TODO: Add styles for mobile responsiveness (hamburger menu) later */
+

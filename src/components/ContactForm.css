@@ -1,0 +1,74 @@
+/* ContactForm.css */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  background-color: var(--light-gray-color); /* Light background for the form area */
+  padding: var(--space-xl);
+  border-radius: var(--space-xs);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xxs);
+}
+
+.form-group label {
+  font-weight: 500;
+  color: var(--text-color);
+  font-size: 0.95rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+  width: 100%;
+  padding: var(--space-sm);
+  border: 1px solid var(--border-color);
+  border-radius: var(--space-xs);
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  color: var(--text-color-light);
+  box-sizing: border-box; /* Ensures padding doesn't add to width */
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(30, 79, 178, 0.2); /* Subtle focus ring */
+}
+
+.form-group textarea {
+  resize: vertical; /* Allow vertical resize, disable horizontal */
+  min-height: 120px;
+}
+
+.contact-form .btn.btn-primary {
+  /* Assuming a global .btn and .btn-primary class might exist or be defined in index.css */
+  /* If not, style it fully here */
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  padding: var(--space-sm) var(--space-lg);
+  border: none;
+  border-radius: var(--space-xs);
+  font-family: var(--font-primary);
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  align-self: flex-start; /* Align button to the start of the flex container if form is centered */
+}
+
+.contact-form .btn.btn-primary:hover {
+  background-color: #163f8c; /* Darker shade of primary for hover */
+  transform: translateY(-2px);
+}
+
+.contact-form .btn.btn-primary:active {
+  transform: translateY(0);
+}
