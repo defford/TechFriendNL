@@ -12,7 +12,7 @@ function Navbar() {
         <Link to="/" className="navbar-item">Home</Link>
         <Link to="/services" className="navbar-item">Services</Link>
         <Link to="/about" className="navbar-item">About</Link>
-        <Link to="/testimonials" className="navbar-item">Testimonials</Link>
+        {/* <Link to="/testimonials" className="navbar-item">Testimonials</Link> */}
         <Link to="/contact" className="navbar-item">Contact</Link>
       </div>
     </nav>

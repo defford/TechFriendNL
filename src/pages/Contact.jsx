@@ -22,7 +22,7 @@ function Contact() {
           </p>
           <ul>
             <li><strong>Email:</strong> <a href="mailto:techfriendnl@gmail.com">techfriendnl@gmail.com</a></li>
-            <li><strong>Phone:</strong> <a href="tel:+17097270484">(709) 727-0484</a></li>
+            {/* <li><strong>Phone:</strong> <a href="tel:+17097270484">(709) 727-0484</a></li> */}
             <li><strong>Hours:</strong> Monday - Friday, 9:00 AM - 5:00 PM (By Appointment)</li>
             {/* Add address here if there's a physical location for drop-offs/visits */}
             {/* <li><strong>Address:</strong> 123 Tech Street, Grand Falls-Windsor, NL (placeholder)</li> */}

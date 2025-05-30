@@ -9,27 +9,6 @@ const testimonialData = [
     author: 'Sarah P.',
     location: 'Grand Falls-Windsor',
     service: 'PC Repair'
-  },
-  {
-    id: 2,
-    quote: "I was having so much trouble setting up my new Wi-Fi. They came over, sorted it all out, and even showed me how to manage it. Fantastic!",
-    author: 'John B.',
-    location: 'Bishop\'s Falls Area',
-    service: 'Home Network Setup'
-  },
-  {
-    id: 3,
-    quote: "My phone was acting weird, and I thought I lost all my photos. Tech Friend NL helped me back everything up and get my phone working properly again. Lifesavers!",
-    author: 'Mary L.',
-    location: 'Grand Falls-Windsor',
-    service: 'Mobile Device Support'
-  },
-  {
-    id: 4,
-    quote: "Needed some help understanding my new computer software. The tutoring session was clear, patient, and exactly what I needed. Thank you!",
-    author: 'David G.',
-    location: 'Botwood',
-    service: 'Tech Tutoring'
   }
 ];
 
