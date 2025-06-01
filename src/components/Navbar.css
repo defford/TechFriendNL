@@ -1,15 +1,23 @@
 /* Basic Navbar styling */
 .navbar {
   background-color: var(--background-color); /* Use main background, or var(--light-gray-color) for a slight off-white */
-  padding: var(--space-md) var(--space-lg);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  /* border-bottom: 1px solid var(--border-color); */
+  padding: var(--space-md) 0; /* Allow container to manage horizontal padding */
+  /* display: flex; */ /* Moved to navbar-container */
+  /* justify-content: space-between; */ /* Moved to navbar-container */
+  /* align-items: center; */ /* Moved to navbar-container */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Softer shadow */
   position: sticky; /* Make navbar sticky */
   top: 0;
   z-index: 1000; /* Ensure it's above other content */
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between; /* Brand left, menu right on desktop */
+  align-items: center;
+  max-width: 1200px; /* Optional: constrain content width */
+  margin: 0 auto; /* Center content if max-width is used */
+  padding: 0 var(--space-lg); /* Original navbar horizontal padding */
 }
 
 .navbar-brand .brand-text {
@@ -17,6 +25,18 @@
   font-weight: 600; /* Using Poppins bold */
   color: var(--primary-color);
   text-decoration: none;
+}
+
+/* Hamburger Icon - Hidden on desktop by default */
+.navbar-burger {
+  display: none; /* Hidden on desktop */
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  font-size: 1.75rem; 
+  padding: var(--space-xs);
+  /* margin-right: var(--space-sm); Removed as brand will naturally space */
 }
 
 .navbar-menu {
@@ -39,5 +59,47 @@
   background-color: var(--light-gray-color); /* Subtle background on hover */
 }
 
-/* TODO: Add styles for mobile responsiveness (hamburger menu) later */
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .navbar-container {
+    justify-content: flex-start; /* Burger and brand to the left */
+    position: relative; /* For absolute positioning of the mobile menu */
+  }
 
+  .navbar-burger {
+    display: block; /* Show burger on mobile */
+    order: -1; /* Ensures it's the first item (leftmost) */
+    margin-right: var(--space-md); /* Space between burger and brand */
+  }
+
+  .navbar-menu {
+    display: none; /* Hide menu by default on mobile */
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: calc(100% + var(--space-md)); /* Position below the navbar, plus original top padding */
+    left: 0;
+    background-color: var(--background-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-top: 1px solid var(--border-color);
+    padding: var(--space-sm) 0; /* Vertical padding for the menu block */
+    z-index: 999; /* Below navbar but above page content */
+  }
+
+  .navbar-menu.is-active {
+    display: flex; /* Show when active */
+  }
+
+  .navbar-item {
+    width: 100%;
+    text-align: left;
+    padding: var(--space-md) var(--space-lg); /* More padding for touch targets and full width */
+    border-bottom: 1px solid var(--border-color); /* Separator for items */
+  }
+
+  .navbar-item:last-child {
+    border-bottom: none; /* No border for the last item */
+  }
+}
+
+/* This comment can be removed now */
