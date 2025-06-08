@@ -1,59 +1,142 @@
 /* Services.css */
 
 .services-page {
-  /* The .container class from index.css handles max-width and horizontal padding */
-  padding-top: var(--space-xl);
-  padding-bottom: var(--space-xxl);
+  padding: 2rem 1rem;
 }
 
 .services-header {
   text-align: center;
-  margin-bottom: var(--space-xl);
-}
-
-.services-header h1 {
-  margin-bottom: var(--space-md);
-}
-
-.services-header p {
-  font-size: 1.125rem;
-  color: var(--text-color-light);
-  max-width: 800px; /* Max width for the intro paragraph */
+  margin-bottom: 3rem;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.services-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* Center cards if they don't fill the whole row */
-  gap: var(--space-lg); /* Gap between cards */
-  /* ServiceCard.css now uses flex: 1 1 300px; which works well with this gap */
+.services-header h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
 }
 
-/* 
-  With flex: 1 1 300px on .service-card and flex-wrap: wrap on .services-list,
-  the cards will automatically adjust their width and wrap to the next line.
-  The number of cards per row will depend on the container width and the 300px basis.
-  Explicit media queries for flex-basis are less necessary.
-  We might still want media queries for other adjustments, like gap size or header text.
-*/
+.services-header p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
 
-@media (max-width: 768px) { /* Small devices (landscape phones, less than 768px) */
+.services-highlight {
+  background-color: #e3f2fd;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--primary-color);
+  margin-top: 1.5rem;
+}
+
+.services-highlight p {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.services-footer {
+  text-align: center;
+  background-color: #f8fafc;
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  margin-top: 3rem;
+}
+
+.services-footer h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.services-footer p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+}
+
+.services-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cta-button {
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cta-button:hover {
+  background-color: var(--primary-color-dark, #2563eb);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.cta-text {
+  font-size: 0.95rem;
+  color: #666;
+  font-style: italic;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .services-page {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .services-header h1 {
+    font-size: 2rem;
+  }
+
   .services-header p {
+    font-size: 1.1rem;
+  }
+
+  .services-list {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .services-footer {
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+  }
+
+  .services-footer h2 {
+    font-size: 1.5rem;
+  }
+
+  .services-footer p {
     font-size: 1rem;
   }
-  .services-list {
-    gap: var(--space-md); /* Reduce gap on smaller screens */
-  }
-}
 
-@media (max-width: 480px) { /* Extra small devices (portrait phones) */
-  .services-page {
-    padding-top: var(--space-md);
-    padding-bottom: var(--space-xl);
-  }
-  .services-header h1 {
-    font-size: 1.75rem; /* Adjust heading size for very small screens */
+  .cta-button {
+    width: 100%;
+    max-width: 280px;
   }
 }

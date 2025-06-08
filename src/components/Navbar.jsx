@@ -30,6 +30,19 @@ function Navbar() {
           {/* <Link to="/testimonials" className="navbar-item" onClick={toggleMobileMenu}>Testimonials</Link> */}
           <Link to="/contact" className="navbar-item" onClick={toggleMobileMenu}>Contact</Link>
         </div>
+        <div className="navbar-phone">
+          <a href="tel:+17097270484" className="phone-button" onClick={() => setIsMobileMenuOpen(false)}>
+            <span className="phone-icon">📞</span>
+            <span className="phone-text">Call/Text: (709) 727-0484</span>
+          </a>
+        </div>
+      </div>
+      
+      {/* Sticky mobile call button */}
+      <div className="mobile-sticky-call">
+        <a href="tel:+17097270484" className="sticky-call-button">
+          📞 Call Now
+        </a>
       </div>
     </nav>
   );
