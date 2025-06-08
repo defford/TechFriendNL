@@ -17,7 +17,149 @@
   flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
   justify-content: center; /* Center cards in the container */
   gap: 1rem; /* Spacing between cards */
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.services-note {
+  font-size: 1.1rem;
+  color: #666;
+  font-style: italic;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Pricing Section */
+.pricing-section {
+  background-color: #f8fafc;
+  padding: 3rem 1rem;
+  margin: 2rem 0;
+}
+
+.pricing-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.pricing-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  text-align: left;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pricing-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.pricing-bullet {
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 1;
+  margin-top: 0.1rem;
+}
+
+.process-section {
+  border-top: 2px solid #e2e8f0;
+  padding-top: 2rem;
+}
+
+.process-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.process-step {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-align: left;
+  font-size: 1.1rem;
+}
+
+.step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+/* FAQ Section */
+.faq-section {
+  padding: 3rem 1rem;
+  background-color: #ffffff;
+}
+
+.faq-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-section h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: #333;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.faq-item {
+  background-color: #f8fafc;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--primary-color);
+}
+
+.faq-question {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+
+.faq-answer {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
 }
 
 .about-snippet-section p {
@@ -37,5 +179,39 @@
   .service-card { /* Ensure ServiceCard.css allows for this override or handles it */
     flex-basis: 80%; /* Or width: 80%; */
     max-width: 400px;
+  }
+
+  .pricing-section {
+    padding: 2rem 1rem;
+  }
+
+  .pricing-section h2 {
+    font-size: 1.75rem;
+  }
+
+  .process-section h3 {
+    font-size: 1.3rem;
+  }
+
+  .pricing-item, .process-step {
+    font-size: 1rem;
+  }
+
+  /* FAQ mobile styles */
+  .faq-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .faq-item {
+    padding: 1.25rem;
+  }
+
+  .faq-question {
+    font-size: 1rem;
+  }
+
+  .faq-answer {
+    font-size: 0.95rem;
   }
 }

@@ -27,6 +27,73 @@
   text-decoration: none;
 }
 
+/* Phone Number Styling */
+.navbar-phone {
+  display: flex;
+  align-items: center;
+  margin-left: var(--space-md);
+}
+
+.phone-button {
+  display: flex;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.phone-button:hover {
+  background-color: var(--primary-color-dark, #2563eb);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.phone-icon {
+  margin-right: var(--space-xs);
+  font-size: 1.1rem;
+}
+
+.phone-text {
+  font-size: 0.95rem;
+}
+
+/* Sticky Mobile Call Button */
+.mobile-sticky-call {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1001;
+}
+
+.sticky-call-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  padding: var(--space-md) var(--space-lg);
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
+  min-width: 140px;
+}
+
+.sticky-call-button:hover {
+  background-color: var(--primary-color-dark, #2563eb);
+  transform: translateX(-50%) translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
 /* Hamburger Icon - Hidden on desktop by default */
 .navbar-burger {
   display: none; /* Hidden on desktop */
@@ -70,6 +137,16 @@
     display: block; /* Show burger on mobile */
     order: -1; /* Ensures it's the first item (leftmost) */
     margin-right: var(--space-md); /* Space between burger and brand */
+  }
+
+  /* Hide desktop phone number on mobile */
+  .navbar-phone {
+    display: none;
+  }
+
+  /* Show sticky mobile call button */
+  .mobile-sticky-call {
+    display: block;
   }
 
   .navbar-menu {

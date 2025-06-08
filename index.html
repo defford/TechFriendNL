@@ -3,7 +3,68 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tech Friend NL</title>
+    <title>Tech Friend NL - Local Tech Support in Grand Falls-Windsor</title>
+    <meta name="description" content="Friendly tech support in Grand Falls-Windsor, NL. We fix computers, remove viruses, help with passwords, and solve everyday tech problems. Call (709) 555-1234 for help!" />
+    
+    <!-- Local Business Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Tech Friend NL",
+      "description": "Local tech support service specializing in computer repair, virus removal, password recovery, and friendly tech help for Grand Falls-Windsor residents.",
+      "telephone": "+17097270484",
+      "url": "https://techfriendnl.ca",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Grand Falls-Windsor",
+        "addressRegion": "NL",
+        "addressCountry": "CA"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Grand Falls-Windsor",
+        "addressRegion": "NL",
+        "addressCountry": "CA"
+      },
+      "serviceType": "Computer Repair and Tech Support",
+      "priceRange": "$40-$80",
+      "openingHours": [
+        "Mo-Fr 09:00-18:00",
+        "Sa 10:00-16:00"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Tech Support Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Virus and Malware Removal",
+              "description": "Remove fake virus warnings, pop-ups, and malware from computers and devices"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service", 
+              "name": "Password Recovery",
+              "description": "Help recover forgotten passwords for email, Facebook, and other accounts"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Computer Tune-up",
+              "description": "Speed up slow computers and fix freezing programs"
+            }
+          }
+        ]
+      }
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>
