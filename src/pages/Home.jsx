@@ -8,12 +8,12 @@ function Home() {
   // Updated with ultra-specific problem examples that people recognize
   const servicesPreview = [
     { 
-      title: 'Scary Pop-ups & Fake Virus Warnings', 
+      title: 'Pop-ups & Fake Virus Warnings', 
       description: 'Your browser keeps showing "Your computer is infected!" warnings? I\'ll remove the fake alerts and show you how to avoid them.', 
       icon: '🛡️' 
     },
     { 
-      title: 'Can\'t Log Into Email or Facebook', 
+      title: 'Can\'t Log Into Email or Social Media', 
       description: 'Forgot your password? Account locked? I\'ll help you get back in safely and set up easy password management.', 
       icon: '🔐' 
     },
@@ -67,10 +67,6 @@ function Home() {
             />
           ))}
         </div>
-        <p className="services-note">
-          Can't connect your home printer to Wi-Fi? Smartphone feeling sluggish? 
-          We handle all the everyday tech problems that others overlook.
-        </p>
       </section>
 
       {/* New Pricing Transparency Section */}
@@ -82,10 +78,7 @@ function Home() {
               <div className="pricing-bullet">•</div>
               <div>Most common fixes: <strong>$40-80</strong></div>
             </div>
-            <div className="pricing-item">
-              <div className="pricing-bullet">•</div>
-              <div>House calls: <strong>$20 travel fee</strong> within Grand Falls-Windsor</div>
-            </div>
+            
             <div className="pricing-item">
               <div className="pricing-bullet">•</div>
               <div>Free estimate over the phone</div>

@@ -7,14 +7,16 @@ function Contact() {
     <div className="contact-page container">
       <header className="contact-header">
         <h1>Get Help Today</h1>
+        <br></br>
         <p>
           Having tech troubles? Don't struggle alone! Whether you need immediate help over the phone 
           or want to schedule an in-person visit, we're here to make your tech problems disappear.
         </p>
         <div className="contact-highlight">
-          <p><strong>📞 Call now for immediate help: (709) 727-0484</strong></p>
           <p>Most problems can be diagnosed and often solved right over the phone!</p>
+          <br></br>
         </div>
+        
       </header>
 
       <div className="contact-content">

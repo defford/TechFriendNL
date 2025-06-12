@@ -32,8 +32,7 @@ function Navbar() {
         </div>
         <div className="navbar-phone">
           <a href="tel:+17097270484" className="phone-button" onClick={() => setIsMobileMenuOpen(false)}>
-            <span className="phone-icon">📞</span>
-            <span className="phone-text">Call/Text: (709) 727-0484</span>
+            <span className="phone-text">Contact Us</span>
           </a>
         </div>
       </div>
